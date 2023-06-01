@@ -1,0 +1,83 @@
+/* mail index  */
+
+
+/* main mail layout */
+.mail-index {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: minmax(auto, 100px) 1fr;
+    gap: 5px;
+}
+
+.mail-index * {
+    font-family: Roboto;
+}
+
+.compose-link {
+    position: fixed;
+    bottom: 3.3rem;
+    right: 2rem;
+    height: 3rem;
+    border: none;
+}
+
+.compose-link span:first-of-type {
+    width: 20%;
+    padding-inline-end: 20px;
+}
+
+.compose-link span:first-of-type::before {
+    font-family: Awesome;
+    content: '\f304';
+}
+
+.compose-link span:last-of-type {
+    width: 80%;
+}
+
+.mail-loader {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 1.25rem;
+}
+
+/* Styles for the compose mail button */
+.compose-link {
+    grid-row: 1;
+    grid-column: 1;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.compose-link:hover {
+    background-color: #1a73e8;
+}
+
+.compose-link:focus,
+.compose-link:active {
+    outline: none;
+    background-color: #0d47a1;
+}
+
+
+
+@media screen and (min-width: 480px) {
+
+    .mail-index {
+        grid-template-columns: 240px 1fr 10px;
+    }
+
+    .compose-link {
+        align-self: center;
+        justify-self: start;
+        margin-inline-start: 1rem;
+        position: static;
+    }
+
+}
