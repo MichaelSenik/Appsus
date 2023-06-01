@@ -1,0 +1,11 @@
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+}
+
+footer p {
+    padding-block: 1rem;
+}
